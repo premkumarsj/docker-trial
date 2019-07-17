@@ -4,5 +4,7 @@ services:
 
 before_install: 
   - docker build -t premkumarsj/docker-trial -f Dockerfile.dev . 
+
+script:
   - docker run -e CI=true premkumarsj/docker-trial npm run test
   
